@@ -1,4 +1,4 @@
-/* 
+/*
  *created by deepak panwar
  *contact no:9999190591
  */
@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit, OnDestroy {
     private id;
     public newtodo = null;
     private sub: any
-    public listOfToDo = [];
+    public listOfToDo;
     constructor(private helperHttp: HelperHttpService,
         private route: ActivatedRoute) {
 
@@ -62,7 +62,7 @@ export class AboutComponent implements OnInit, OnDestroy {
             this.helperHttp.postData('https://jsonplaceholder.typicode.com/todos', dat)
                 .subscribe(data => {
                     console.log(JSON.stringify(data));
-                    dat['id'] = data.id;
+                    dat['id'] = data['id'];
                     this.listOfToDo.push(dat);
                     this.newtodo = null;
 

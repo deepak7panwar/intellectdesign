@@ -20,8 +20,8 @@
     "@angular/platform-browser": "^8.2.14",
     "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/router": "^8.2.14",
+    "@clr/angular": "^2.3.2",
     "@webcomponents/custom-elements": "1.0.0",
-    "core-js": "^2.4.1",
     "mutationobserver-shim": "^0.3.2",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.0.0-rc.0",
@@ -29,9 +29,8 @@
     "tslib": "^1.10.0",
     "web-animations-js": "^2.3.2",
     "zone.js": "~0.9.1",
-    "clarity-angular": "~0.10.8",
-    "clarity-icons": "~0.10.8",
-    "clarity-ui": "~0.10.8"
+    "@clr/ui": "2.3.2",
+    "@clr/icons": "2.3.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.19",

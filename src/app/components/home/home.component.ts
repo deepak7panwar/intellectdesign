@@ -1,4 +1,4 @@
-/* 
+/*
  *created by deepak panwar
  *contact no:9999190591
  */
@@ -10,7 +10,7 @@ import { HelperHttpService } from '../../services/helper-http.service'
     templateUrl: './home.component.html',
 })
 export class HomeComponent {
-    public users: any[] = [];
+    public users;
     constructor(private heplerHttp: HelperHttpService) {
         this.heplerHttp.getData('https://jsonplaceholder.typicode.com/users')
             .subscribe(data => {

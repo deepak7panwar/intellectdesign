@@ -14,9 +14,7 @@
             </div>
             <div class="col-xs-2">
                 <div class="checkbox">
-                    <clr-checkbox (click)="update(i)" name="termsCheckbox" [(ngModel)]="listOfToDo[i].completed">
-
-                    </clr-checkbox>
+                    <input  clrCheckbox (click)="update(i)" name="termsCheckbox" [(ngModel)]="listOfToDo[i].completed"/>
                 </div>
             </div>
             <div class="col-xs-2">
