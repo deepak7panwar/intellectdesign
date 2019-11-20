@@ -43,7 +43,7 @@ export class HelperHttpService {
     }
 
 
-    getData(url: string, jsonHeaders?: any[], param?: JSON) {
+    getData(url: string, jsonHeaders?: any[], param?: JSON): Observable<any> {
         let header = new HttpHeaders();
         let parameters = param || {};
 
@@ -52,11 +52,7 @@ export class HelperHttpService {
         } else {
             this.createAuthorizationHeader(header);
         }
-        return this.http.get(url, {
-            headers: header,
-            params: parameters
-        }).pipe(map((res: Response) => res.json()),
-            catchError(this.handleError))
+        return this.http.get(url);
 
 
     }
@@ -69,25 +65,19 @@ export class HelperHttpService {
             this.createAuthorizationHeader(headers);
 
         }
-        return this.http.post(url, JSON.stringify(body), { headers }).pipe(
-            map((res: Response) => res.json()),
-            catchError(this.handleError))
+        return this.http.post(url, JSON.stringify(body), { headers });
 
 
     }
     updateService(url: string, param: any): Observable<any> {
         let body = JSON.stringify(param);
         return this.http
-            .put(url, body).pipe(
-                map(this.extractData),
-                catchError(this.handleError));
+            .put(url, body);
     }
     deleteServiceWithId(url: string, key: string, val: string): Observable<any> {
 
         return this.http
-            .delete(url + "/?" + key + "=" + val).pipe(
-                map(this.extractData),
-                catchError(this.handleError));
+            .delete(url + "/?" + key + "=" + val);
     }
     private extractData(res: Response) {
         let body = res.json();

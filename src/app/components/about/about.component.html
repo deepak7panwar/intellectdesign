@@ -13,9 +13,11 @@
                 </div>
             </div>
             <div class="col-xs-2">
-                <div class="checkbox">
-                    <input  clrCheckbox (click)="update(i)" name="termsCheckbox" [(ngModel)]="listOfToDo[i].completed"/>
-                </div>
+                    <clr-checkbox-wrapper>
+                            <input type="checkbox" clrCheckbox (click)="update(i)" name="termsCheckbox" [(ngModel)]="listOfToDo[i].completed" />
+                            <label>Finished</label>
+                          </clr-checkbox-wrapper>
+
             </div>
             <div class="col-xs-2">
                 <a (click)="delete(i)" class="btn btn-primary">Delete</a>

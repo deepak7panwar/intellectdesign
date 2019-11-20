@@ -10,7 +10,7 @@ import { HelperHttpService } from '../../services/helper-http.service'
     templateUrl: './home.component.html',
 })
 export class HomeComponent {
-    public users;
+    public users = [];
     constructor(private heplerHttp: HelperHttpService) {
         this.heplerHttp.getData('https://jsonplaceholder.typicode.com/users')
             .subscribe(data => {

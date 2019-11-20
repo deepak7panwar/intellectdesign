@@ -1,10 +1,11 @@
-/* 
+/*
  *created by deepak panwar
  *contact no:9999190591
  */
 import { async, TestBed, ComponentFixture } from "@angular/core/testing";
-import { ClarityModule } from 'clarity-angular';
+
 import { HomeComponent } from './home.component';
+import { ClarityModule } from '@clr/angular';
 
 
 describe('HomeComponent', () => {
@@ -20,7 +21,7 @@ describe('HomeComponent', () => {
                 HomeComponent
             ],
             imports: [
-                ClarityModule.forRoot()
+                ClarityModule
             ]
         });
 

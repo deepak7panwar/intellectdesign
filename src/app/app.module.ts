@@ -8,6 +8,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { AboutComponent } from "./components/about/about.component";
 import { HttpClientModule } from '@angular/common/http';
 import { ClarityModule } from "@clr/angular";
+import { HelperHttpService } from './services/helper-http.service';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,7 @@ import { ClarityModule } from "@clr/angular";
         ROUTING,
         HttpClientModule,
     ],
-    providers: [],
+    providers: [HelperHttpService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

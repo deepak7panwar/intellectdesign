@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit, OnDestroy {
     private id;
     public newtodo = null;
     private sub: any
-    public listOfToDo;
+    public listOfToDo = [];
     constructor(private helperHttp: HelperHttpService,
         private route: ActivatedRoute) {
 
