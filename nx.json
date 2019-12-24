@@ -1,0 +1,21 @@
+{
+  "npmScope": "myworkspace",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "todo-e2e": {
+      "tags": []
+    },
+    "todo": {
+      "tags": []
+    },
+    "ui-widgets": {
+      "tags": []
+    }
+  }
+}
