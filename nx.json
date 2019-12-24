@@ -16,6 +16,9 @@
     },
     "ui-widgets": {
       "tags": []
+    },
+    "ui-widgets-e2e": {
+      "tags": []
     }
   }
 }
